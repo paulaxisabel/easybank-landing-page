@@ -1,0 +1,115 @@
+.header
+  background-color: $col-white
+  overflow: hidden
+  z-index: 3
+  position: sticky
+  top: 0
+  & .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 6.4rem
+    @media screen and (min-width: 768px)
+      height: 8rem
+    & .cta
+      display: none
+      @media screen and (min-width: 992px)
+        display: block
+  &__hamburger
+    cursor: pointer
+    width: 2.4rem
+    z-index: 10
+    @media screen and (min-width: 768px)
+      display: none
+    &:before,
+    &:after,
+    & div
+      background: $col-dark-blue
+      content: ''
+      display: block
+      height: 0.1rem
+      margin: 0.4rem 0
+      transition: 0.35s
+    &.open::before
+      transform: translateY(0.5rem) rotate(135deg)
+    &.open::after
+      transform: translateY(-0.5rem) rotate(-135deg)
+    &.open div
+      transform: scale(0)
+
+.nav
+  &__links
+    background-color: $col-white
+    border-radius: 0.4rem
+    position: fixed
+    top: 10rem
+    left: 2rem
+    right: 2rem
+    display: none
+    text-align: center
+    padding: 4rem 0
+    margin: 0 auto
+    z-index: 10
+    @media screen and (min-width: 768px)
+      margin-left: 2.8rem
+      background-color: transparent
+      display: flex
+      align-items: center
+      gap: 3rem
+      opacity: 1
+      padding: 0
+      transform: none
+      position: static
+    &.open
+      display: block
+    & li
+      color: $col-dark-blue
+      font-size: 1.4rem
+      font-weight: 400
+      line-height: -0.11px
+      position: relative
+      transition: $transition color
+      &:hover
+        color: $col-grayish-blue
+      @media screen and (min-width: 768px)
+        color: $col-grayish-blue
+        font-weight: 500
+        &:hover
+          color: $col-dark-blue
+        &:hover::before
+          opacity: 1
+      &:not(:last-of-type)
+        margin-bottom: 2.4rem     
+        @media screen and (min-width: 768px)
+          margin-bottom: 0 
+      &::before
+        background: $gradient
+        content: ''
+        position: absolute
+        opacity: 0
+        bottom: -3.2rem
+        height: 0.3rem
+        width: 100%
+        transition: $transition
+.logo
+  margin-top: 0.5rem
+
+.overlay
+  background: linear-gradient(#2d314d, rgba(45, 49, 77, 0))
+  position: absolute
+  top: 6.4rem
+  right: 0
+  bottom: 0
+  opacity: 0
+  transition: opacity 400ms ease
+  height: 100vh
+  width: 100vw
+  z-index: -1
+  @media screen and (min-width: 768px)
+    display: none
+  &.open
+    opacity: 1
+    pointer-events: all
+    position: fixed
+    width: 100%
+    z-index: 3

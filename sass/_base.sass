@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap')
+
+$col-dark-blue: hsl(233, 26%, 24%)
+$col-lime-green: hsl(136, 65%, 51%)
+$col-bright-cyan: hsl(192, 70%, 51%)
+$col-grayish-blue: hsl(233, 8%, 62%)
+$col-light-grayish-blue: hsl(220, 16%, 96%)
+$col-very-light-gray: hsl(0, 0%, 98%)
+$col-white: hsl(0, 0%, 100%)
+$col-text-hover: #30C88F
+$gradient: linear-gradient(160deg, $col-lime-green 0%, $col-bright-cyan 100%)
+
+
+// Font family
+$font: 'Public Sans', sans-serif
+
+// Spacing
+$space-max-width: 111rem
+
+// Design elements
+$transition: 200ms ease-in-out
+
+// Typography
+*
+  font-family: $font
+
+body
+  color: $col-dark-blue
+  font-size: 1.8rem
+
+h1, h2, h3, h4, p
+  margin: 0
+
+h1
+  font-size: 4rem
+  font-weight: 300
+  line-height: 4.7rem
+  letter-spacing: -0.71px
+  margin-bottom: 1.6rem
+  @media screen and (min-width: 768px)
+    font-size: 5.6rem
+    line-height: 6.4rem
+    letter-spacing: -0.9px
+    margin-bottom: 2.4rem
+
+h2
+  font-size: 3.2rem
+  font-weight: 300
+  line-height: 3.76rem
+  letter-spacing: -0.57px
+  margin-bottom: 1.4rem
+  @media screen and (min-width: 768px)
+    font-size: 4rem
+    line-height: 6.4rem
+    letter-spacing: -0.6px
+    margin-bottom: 1.7rem
+
+h3
+  font-size: 2rem
+  font-weight: 300
+  line-height: 2.8rem
+  letter-spacing: -0.36px
+  margin-bottom: 1.6rem
+  @media screen and (min-width: 768px)
+    font-size: 2.4rem
+    line-height: 2.8rem
+    letter-spacing: -0.43px
+    margin-bottom: 2.6rem
+
+h4
+  font-size: 1.6rem
+  font-weight: 300
+  line-height: 2rem
+  letter-spacing: -0.29px
+  transition: $transition
+  &:hover
+    color: $col-text-hover
+    cursor: pointer
+    
+small
+  color: $col-grayish-blue
+  font-size: 1rem
+  font-weight: 400
+  letter-spacing: -0.16px
+
+p
+  color: $col-grayish-blue
+  font-size: 1.5rem
+  font-weight: 400
+  line-height: 2.5rem
+  letter-spacing: -0.23px
+  @media screen and (min-width: 768px)
+    font-size: 1.8rem
+    line-height: 2.8rem
+    letter-spacing: -0.2px
+
+.t-copyright
+  font-size: 1.5rem
+  font-weight: 400
+  letter-spacing: -0.23px
+  @media screen and (min-width: 768px)
+    text-align: right
+
+
+// Reset
+html
+  box-sizing: border-box
+  font-size: 62.5%
+  height: 100%
+
+*, *::before, *::after
+  box-sizing: border-box
+
+body
+  margin: 0
+  overflow-x: hidden
+  &.disable-scroll
+    overflow: hidden
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+a
+  color: inherit
+  text-decoration: none
+
+input, textarea
+  background: none
+  border: none
+  display: block
+  margin: 0
+  padding: 0
+
+textarea
+  resize: none
+
+label
+  display: block
+
+button
+  border: none
+  cursor: pointer
+  outline: none

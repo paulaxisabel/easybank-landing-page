@@ -1,0 +1,58 @@
+$col-dark-blue: hsl(233, 26%, 24%)
+$col-lime-green: hsl(136, 65%, 51%)
+$col-bright-cyan: hsl(192, 70%, 51%)
+$col-grayish-blue: hsl(233, 8%, 62%)
+$col-light-grayish-blue: hsl(220, 16%, 96%)
+$col-very-light-gray: hsl(0, 0%, 98%)
+$col-white: hsl(0, 0%, 100%)
+$gradient: linear-gradient(160deg, $col-lime-green 0%, $col-bright-cyan 100%)
+
+.container
+  padding: 0 2.4rem
+  margin: 0 auto
+  max-width: $space-max-width
+  @media screen and (min-width: 1200px)
+    padding: 0
+
+.grid
+  display: grid
+  justify-content: center
+  gap: 3.2rem
+  margin-top: 5.6rem
+  @media screen and (min-width: 680px)
+    grid-template-columns: repeat(2, 1fr)
+  @media screen and (min-width: 1200px)
+    grid-template-columns: repeat(4, 1fr)
+    gap: 3rem
+
+.cta
+  background: $gradient
+  border-radius: 2.2rem
+  color: $col-white
+  display: inline-block
+  font-size: 1.4rem
+  font-weight: 700
+  padding: 1.5rem 3.5rem
+  max-height: 4.4rem
+  transition: $transition
+  height: 4.4rem
+  max-width: 16.6rem
+  position: relative
+  &:hover:before
+    opacity: 0.4
+  &::before
+    background-color: $col-white
+    border-radius: 2.2rem
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    opacity: 0
+    transition: $transition
+    height: 100%
+    width: 100%
+
+    
+    

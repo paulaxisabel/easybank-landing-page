@@ -1,0 +1,70 @@
+.main
+  overflow: hidden
+.hero
+  background-color: $col-very-light-gray
+  @media screen and (min-width: 992px)
+    background-image: url(../images/bg-intro-desktop.svg)
+    background-repeat: no-repeat
+    background-position-y: -26rem
+    background-position-x: 45rem
+    height: 65.6rem
+  @media screen and (min-width: 1200px)
+    background-position-x: calc(100vw - 83.2rem)
+  & .container
+    display: flex
+    flex-direction: column
+    padding: 0
+    position: relative
+    @media screen and (min-width: 992px)
+      flex-direction: row-reverse
+  &__content
+    padding: 0 2.4rem
+    text-align: center
+    margin: 0 auto
+    @media screen and (min-width: 992px)
+      text-align: left
+      margin-top: 17rem
+      width: 55%
+    @media screen and (min-width: 1200px)
+      padding: 0
+    & h1
+      margin: 0 auto 1.6rem
+      max-width: 40rem
+      @media screen and (min-width: 992px)
+        margin: 0 0 2.4rem
+    & p
+      max-width: 44rem
+      margin-bottom: 3.6rem
+    & .cta
+      margin-bottom: 8.8rem
+      @media screen and (min-width: 992px)
+        margin-bottom: 17rem
+  &__img
+    background-image: url(../images/bg-intro-mobile.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position-x: right
+    background-position-y: center
+    position: relative
+    margin-bottom: 4.1rem
+    height: 75.2vw
+    @media screen and (min-width: 992px)
+      background: none
+      margin-bottom: 0
+      width: 45%
+    & img
+      width: 100%
+      padding: 0 2.4rem
+      position: absolute
+      bottom: -1.7rem
+      left: 50%
+      transform: translateX(-50%)
+      max-width: 82rem
+      @media screen and (min-width: 992px)
+        position: relative
+        padding: 0
+        left: initial
+        transform: none
+        top: -12.2rem
+        right: -3rem
+        width: auto
